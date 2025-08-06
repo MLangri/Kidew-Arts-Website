@@ -9,8 +9,8 @@ const booking = () => {
                     <img src={booking_img} className='booking-img' />
                 </div>
                 <div className="about-right" >
-                    <h3>UPCOMING EVENTS</h3>
-                    <h2>Sip & Paint – An Evening of Art, Wine & Laughter</h2>
+                    <h3>SIP & PAINT</h3>
+                    <h2>An Evening of Art, Wine & Laughter</h2>
                     <p>
                         <br />Join us for a relaxing and inspiring Sip & Paint session at our Kidew Arts, where creativity meets fun in a warm and welcoming atmosphere. Whether you’re a seasoned artist or a complete beginner, this event is the perfect opportunity to unwind, connect, and express yourself on canvas. Guided step-by-step by one of our talented local artists, you’ll create your own masterpiece while enjoying a selection of refreshing drinks and light snacks.
                     </p>
