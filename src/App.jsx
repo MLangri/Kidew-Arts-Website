@@ -7,6 +7,8 @@ import About from './components/about/about';
 import Gallery from './components/gallery/gallery';
 import Booking from './components/booking/booking';
 import Artists from './components/artists/artists';
+import Contact from './components/contact/contact';
+import Footer from './components/footer/footer';
 const App = () => {
   return (
     <div>
@@ -22,6 +24,9 @@ const App = () => {
           <Gallery/>
           <Title subTitle='OUR ARTISTS' title= 'Meet our talented Artists'/>
           <Artists/>
+          <Title subTitle='CONTACT US' title= 'Get In Touch'/>
+          <Contact/>
+          <Footer/>
         </div>
     </div>
   )
