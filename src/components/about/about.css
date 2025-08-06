@@ -15,3 +15,21 @@
     width: 100%;
     border-radius: 10px;
 }
+.about h3{
+    font-weight: 600;
+    color: maroon;
+    font-size: 20px;
+    text-transform: uppercase;
+    align-items: center;
+}
+.about h2{
+    font-weight: 600;
+    color: black;
+    font-size: 30px;
+    margin: 10px 0;
+    max-width: 400px;
+}
+.about p{
+    color: #4a4949;
+    margin-bottom: 15px;
+}
