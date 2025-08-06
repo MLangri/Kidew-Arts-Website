@@ -1,0 +1,28 @@
+nav{
+    position: fixed;
+    width:100%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;/*ovelaps content on the webpage*/
+    color: #fff;
+}
+.logo{
+    width: 150px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 0px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 8px;
+    font-size: 15px;
+}    
