@@ -10,3 +10,15 @@
     display: inline-block;
     margin-left: 20px;
 }
+@media (max-width: 600px) {
+    .footer{
+        display: block;
+        align-items: center;
+    }
+    .footer ul li{
+        margin: 10px 0;
+    }
+    .footer ul{
+        margin-top: 10px;
+    }
+}

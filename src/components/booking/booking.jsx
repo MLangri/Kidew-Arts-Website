@@ -5,10 +5,10 @@ import booking_img from '../../assets/booking.jpg';
 const booking = () => {
   return (
     <div className='booking'>
-        <div className="about-left" >
+        <div className="booking-left" >
                     <img src={booking_img} className='booking-img' />
                 </div>
-                <div className="about-right" >
+                <div className="booking-right" >
                     <h3>SIP & PAINT</h3>
                     <h2>An Evening of Art, Wine & Laughter</h2>
                     <p>

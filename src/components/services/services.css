@@ -48,3 +48,14 @@
     align-items: center;
     justify-content: center;
 }
+/* Media Queries */
+@media (max-width: 650px) {
+    .services {
+      flex-direction: column;
+    }
+    .services{
+      flex-basis: 100%;
+      margin: 20px;
+    }
+    
+}

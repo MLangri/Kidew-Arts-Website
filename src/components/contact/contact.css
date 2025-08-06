@@ -39,11 +39,23 @@
 .contact form input, .contact form textarea{
     width: 100%;
     display: block;
-    background: gray;
+    background: rgb(116, 62, 62);
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     border: 0;
     outline: 0;
     resize: none;
+}
+.contact-col span{
+    display: block;
+    margin: 20px 0;
+}
+@media (max-width: 700px) {
+    .contact{
+        display: block;
+    }
+    .contact-col{
+        padding: 20px;
+    }
 }

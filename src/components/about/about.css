@@ -33,3 +33,16 @@
     color: #4a4949;
     margin-bottom: 15px;
 }
+/* Media Queries */
+@media (max-width: 768px) {
+    .about{
+        flex-direction: column;
+    }
+    .about-left{
+        flex-basis: 100%;
+        margin: 20px;
+    }
+    .about-right{
+        flex-basis: 100%;
+    }
+}

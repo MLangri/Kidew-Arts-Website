@@ -55,3 +55,34 @@
     font-size: 15px;
     color: maroon;
 }
+@media (max-width: 800px) {
+    .artists{
+        padding: 0 40px;
+    }
+    .right-btn, .left-btn{
+        width: 40px;
+        padding: 10px;
+    }
+    .artists .slider ul li{
+        width: 25%;
+    }
+    .slide{
+        padding: 10px;
+    }
+    .slide img{
+        width: 50px;
+        border: 3px solid #ffffff;
+    }
+}
+@media (max-width: 600px) {
+    .artist-info{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .artist-info h3{
+        font-size: 16px;
+    }
+    .slider p{
+        font-size: 12px;
+    }
+}
