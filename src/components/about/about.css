@@ -1,0 +1,17 @@
+.about{
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+.about-left{
+    flex-basis: 40%;/*space used*/ 
+}
+.about-right{
+    flex-basis: 50%;
+}
+.about-img{
+    width: 100%;
+    border-radius: 10px;
+}
