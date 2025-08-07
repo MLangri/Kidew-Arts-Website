@@ -1,3 +1,3 @@
-# KIDEW ARTS WEBSITE
+# KIDEW ARTS GALLERY WEBSITE
 
 Located at Kidew Centre, Migori County
