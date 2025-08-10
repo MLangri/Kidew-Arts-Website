@@ -1,4 +1,5 @@
 import React from 'react'
+import { Routes, Route } from "react-router-dom";
 import Navbar from './components/navbar/navbar';
 import Hero from './components/hero/hero';
 import Services from './components/services/services';
@@ -9,10 +10,19 @@ import Booking from './components/booking/booking';
 import Artists from './components/artists/artists';
 import Contact from './components/contact/contact';
 import Footer from './components/footer/footer';
+import Cart from './components/cart/cart';
+import Login from './components/Authentication/Login';
+import Register from './components/Authentication/Register';
+import ForgotPassword from './components/Authentication/ForgotPassword';
 const App = () => {
   return (
-    <div>
+    <>
         <Navbar/>
+        <Routes>
+        <Route
+          path="/"
+          element={
+        <>
         <Hero/>
         <div className="container">
           <About/>
@@ -28,8 +38,16 @@ const App = () => {
           <Contact/>
           <Footer/>
         </div>
-    </div>
-  )
-}
+        </>
+      }
+        />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+      </Routes>
+    </>
+  );
+};
 
 export default App

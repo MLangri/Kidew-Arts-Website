@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { forgotPassword } from '../store/authSlice';
+import { forgotPassword } from '../Redux/userSlice';
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -14,8 +14,16 @@ export default function ForgotPassword() {
   };
   return (
     <form onSubmit={handle}>
+      <h2>Reset your password </h2>
       <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" />
       <button type="submit">Reset Password</button>
+      <button 
+          type="button" 
+          onClick={() => navigate(-1)} 
+          className="back-btn"
+        >
+          &larr; Back
+        </button>
     </form>
   );
 }

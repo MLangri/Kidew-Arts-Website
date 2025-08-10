@@ -1,32 +1,37 @@
 import React, { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import './register.css';
+//import ReCAPTCHA from 'react-google-recaptcha';
 import { useDispatch, useSelector } from 'react-redux';
-import { registerUser } from '../store/authSlice';
+import { registerUser } from '../Redux/userSlice';
 
-export default function RegisterForm() {
+export default function Register() {
   const dispatch = useDispatch();
-  const { loading, error } = useSelector(s => s.auth);
-
-  const [name, setName] = useState('');
+  const { status, error } = useSelector(state => state.user);
   const [email, setEmail] = useState('');
-  const [pw, setPw] = useState('');
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [password, setPassword] = useState('');
+  //const [recaptchaToken, setRecaptchaToken] = useState(null);
 
-  const handleSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    if (!recaptchaToken) return alert('Please complete the reCAPTCHA');
-    dispatch(registerUser({ email, password: pw, displayName: name, recaptchaToken }));
+    {/*if (!recaptchaToken) return alert('Please complete reCAPTCHA');*/}
+    dispatch(registerUser({ email, password, role: 'user' }));//put recaptcha token after user once configured
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={onSubmit}>
       <h2>Register</h2>
-      <input value={name} onChange={e=>setName(e.target.value)} placeholder="Name" />
-      <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" />
-      <input value={pw} onChange={e=>setPw(e.target.value)} placeholder="Password" type="password" />
-      <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={token => setRecaptchaToken(token)} />
-      <button type="submit" disabled={loading}>Sign Up</button>
+      <input type="email" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required/>
+      <input type="password" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)} required/>
+      {/*<ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} onChange={token => setRecaptchaToken(token)} />*/}
+      <button type="submit" disabled={status === 'loading'}>Sign Up</button>
       {error && <p style={{color:'red'}}>{error}</p>}
+      <button 
+          type="button" 
+          onClick={() => navigate(-1)} 
+          className="back-btn"
+        >
+          &larr; Back
+        </button>
     </form>
   );
 }

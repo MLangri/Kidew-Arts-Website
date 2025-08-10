@@ -41,7 +41,7 @@ const Navbar = () => {
                 <RouterLink to="/cart" className="icon-btn">
                     <FaShoppingCart size={20} />
                 </RouterLink>
-                <RouterLink to="/profile" className="icon-btn">
+                <RouterLink to="/login" className="icon-btn">
                     <FaUser size={20} />
                 </RouterLink>
             </div>
