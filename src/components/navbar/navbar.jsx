@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import { Link as RouterLink } from 'react-router-dom';
 
 import './navbar.css';
 import logo from '../../assets/art-gallery-logo-design_92167-618.avif';
@@ -35,6 +37,14 @@ const Navbar = () => {
                     <li><Link to='contact' smooth={true} offset={0} duration={500} className='btn'>Contact</Link></li>
                 </ul>
             </ul>
+            <div className="nav-icons">
+                <RouterLink to="/cart" className="icon-btn">
+                    <FaShoppingCart size={20} />
+                </RouterLink>
+                <RouterLink to="/profile" className="icon-btn">
+                    <FaUser size={20} />
+                </RouterLink>
+            </div>
             <img src={menuIcon} alt='' className='menu-icon' onClick={toggleMenu} />
         </nav>
     );

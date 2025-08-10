@@ -84,3 +84,18 @@ nav ul li{
     right: -200px;
   }
 }
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-btn {
+    color: white;
+    transition: color 0.3s;
+}
+
+.icon-btn:hover {
+    color: #f8d210;
+}
+
